@@ -409,10 +409,11 @@ div#preloader {
 .mobile-nav-toggle {
   position: fixed;
   right: 15px;
-  top: 15px;
+  top: 8px;
   z-index: 9998;
   border: 0;
-  background: none;
+  padding: 10px;
+  background: #000;
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;

@@ -2652,3 +2652,21 @@ span.email-notes {
 .title1 {
   font-weight: 400 !important;
 }
+
+#calculator {
+}
+
+.calculator-header {
+  text-align: center;
+  background: url(../img/slider/7.jpeg) center no-repeat;
+  background-size: cover;
+  height: 250px;
+}
+
+.calculator-header h1 {
+  color: #FFF;
+  padding-top: 100px;
+  font-weight: bolder;
+}
+
+.calculator-area {}

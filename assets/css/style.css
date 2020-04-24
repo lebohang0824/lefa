@@ -2677,3 +2677,46 @@ span.email-notes {
 
 .products-area {
 }
+
+
+
+
+
+.scroll {
+  position: relative;
+  width: 600px;
+  height: 120px;
+  border: 1px #999 solid;
+  overflow: hidden;
+}
+
+.scrollList {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 560px;
+  height: 120px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.scrollList ul {
+  position: relative;
+  width: 9999px;
+  height: 120px;
+}
+
+.scrollList li {
+  float: left;
+  width: 560px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.scrollList li a {
+  float: left;
+  margin: 12px 6px;
+  width: 128px;
+  height: 96px;
+  overflow: hidden;
+}

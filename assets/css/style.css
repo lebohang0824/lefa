@@ -2720,3 +2720,15 @@ span.email-notes {
   height: 96px;
   overflow: hidden;
 }
+
+.ready-btn.btn-calc {
+  margin-right: 15px;
+  background: #B71C1C;
+  border: 1px solid #B71C1C !important;
+}
+
+.ready-btn.btn-calc:hover {
+  color: #B71C1C;
+  background: transparent !important;
+  border: 1px solid #B71C1C !important;
+}

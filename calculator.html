@@ -59,11 +59,62 @@
 
       <!-- ======= About Section ======= -->
     <div id="calculator" class="calculator-area area-padding">
-      <div class="calculator-header">
+      <div class="container p-5">
         <h1>Bricks Calculator</h1>
-      </div>
-      <div class="container">
-
+        <div class="calc">
+          <form id="calc">
+            <div class="form-group">
+              <select class="form-control">
+                <optgroup label="Building Bricks">
+                  <option>Maxi Plain Bricks</option>
+                  <option>Diamond Bricks</option>
+                  <option>Stock Building Bricks</option>
+                </optgroup>
+                <optgroup label="Paving Bricks">
+                  <option>Interlock 60mm Paving Bricks</option>
+                  <option>Interlock 80mm Paving Bricks</option>
+                  <option>Bevel Edge Paving Bricks</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="number" 
+                class="form-control" 
+                placeholder="Length (metre)" 
+                data-rule="minlen:4" 
+                data-msg="Please enter a number" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <input type="number" 
+                class="form-control" 
+                placeholder="Height (metre)" 
+                data-rule="minlen:4" 
+                data-msg="Please enter a number" />
+              <div class="validate"></div>
+            </div>
+            <button class="ready-btn btn-calc m-0" href="calculator.html">Calculate</button>
+          </form>
+          <div id="results" class="d-none">
+            <div class="pt-5">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h4>Calculation results</h4>
+                  <table class="table table-bordered">
+                    <tr>
+                      <td>Wall in meters<sup>2</sup></td>
+                      <td id="wall-meters"></td>
+                    </tr>
+                    <tr>
+                      <td>Bricks Needed</td>
+                      <td id="brick-needed"></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div><!-- End About Section -->
 
@@ -165,6 +216,35 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script type="text/javascript">    
+    $("#calc").submit(function(e) {
+      e.preventDefault();
+      const type = e.target[0].value;
+      const length = e.target[1].value;
+      const height = e.target[2].value;
+
+      $('#results').removeClass('d-none');
+
+      let ans = 0;
+      const area = length*height;
+
+      $('#wall-meters').html(area);
+
+      if (type == 'Maxi Plain Bricks' || type == 'Diamond Bricks' || type == 'Stock Building Bricks') {
+        if (type == 'Maxi Plain Bricks') {
+          ans = area * 18;
+        }else if (type == 'Stock Building Bricks') {
+          ans = area * 20;
+        }else {
+          ans = area * 20;
+        }
+      } else {
+        ans = area * 50;
+      }
+
+      $('#brick-needed').html(ans);
+    });
+  </script>
 
 </body>
 

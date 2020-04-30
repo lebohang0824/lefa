@@ -106,6 +106,14 @@ $("#calculator").submit(function(e) {
                 <td>Total Price</td>
                 <td>R${Math.ceil(price)}.00</td>
             </tr>
+            <tr class="wow fadeIn">
+                <td>&nbsp;</td>
+                <td>
+                    <a href="#" class="ready-btn btn-calc btn-sm m-0" href="calculator.html" style="font-size: 12px; padding: 5px 10px; border-radius: 2px">
+                       Purchase
+                    </a>
+                </td>
+            </tr>
         `;
     } else {
 
@@ -129,6 +137,14 @@ $("#calculator").submit(function(e) {
             <tr class="wow fadeIn">
                 <td>Total Price</td>
                 <td>R${Math.ceil(price)}.00</td>
+            </tr>
+            <tr class="wow fadeIn">
+                <td>&nbsp;</td>
+                <td>
+                    <a href="#" class="ready-btn btn-calc btn-sm m-0" href="calculator.html" style="font-size: 12px; padding: 5px 10px; border-radius: 2px">
+                       Purchase
+                    </a>
+                </td>
             </tr>
         `;
     }

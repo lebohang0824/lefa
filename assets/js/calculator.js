@@ -53,12 +53,12 @@ $("#calculator").submit(function(e) {
 
     if (selectValue == 'Maxi Plain Bricks' || selectValue == 'Maxi Diamond Bricks') {
         bricksNeeded = area * 32;
-        price = bricksNeeded * 4.31;
+        price = bricksNeeded * 3.75;
         picture = (selectValue == 'Maxi Plain Bricks') && 'Plain.jpeg';
     } else {
         bricksNeeded = area * 50;
         if (selectValue == 'Stock Building Bricks') {
-            price = bricksNeeded * 2.02;
+            price = bricksNeeded * 1.76;
             picture = 'stock.jpeg';
         }
 
@@ -66,15 +66,15 @@ $("#calculator").submit(function(e) {
 
         // Paving
         if (selectValue == 'Bevel Edge Paving Bricks') {
-            (color == 'Grey') ? price = bricksNeeded * 2.24 : price = bricksNeeded * 2.69;
+            (color == 'Grey') ? price = bricksNeeded * 1.95 : price = bricksNeeded * 2.34;
             (color == 'Grey') ? picture = 'Bevel Grey.jpeg' : picture = 'Bevel Red.jpeg';
         }
         if (selectValue == 'Interlock 60mm Paving Bricks') {
-            (color == 'Grey') ? price = bricksNeeded * 2.59 : price = bricksNeeded * 2.82;
+            (color == 'Grey') ? price = bricksNeeded * 2.25 : price = bricksNeeded * 2.45;
             picture = (color == 'Grey') && '60mm.jpeg';
         }    
         if (selectValue == 'Interlock 80mm Paving Bricks') {
-            (color == 'Grey') ? price = bricksNeeded * 3.39 : price = bricksNeeded * 3.62;
+            (color == 'Grey') ? price = bricksNeeded * 2.95 : price = bricksNeeded * 3.15;
             picture = (color == 'Grey') && '80mm.jpeg';
         }
     }

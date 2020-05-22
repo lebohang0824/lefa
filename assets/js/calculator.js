@@ -11,6 +11,9 @@ bricks.change(function(e) {
     selectValue = e.target.value;
 
     if (optgroup == 'Paving Bricks') {
+
+        $('#height').attr('placeholder', 'Width (metre)');
+
         const colors = `
             <div class="form-group wow fadeIn">
               <select id="color" class="form-control mt-3">
@@ -22,6 +25,8 @@ bricks.change(function(e) {
 
         !$('#color').length && $(colors).insertAfter('#bricks');
     } else {
+
+        $('#height').attr('placeholder', 'Height (metre)');
         $('#color').length && $('#color').remove();
     }
 });
@@ -80,7 +85,6 @@ $("#calculator").submit(function(e) {
     }
 
     if (optgroup == 'Paving Bricks') {
-
         const display = `
             <tr class="wow fadeIn">
                 <td><img src="assets/img/bricks/${picture}" width="250"</td>

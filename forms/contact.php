@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
   // More headers
-  $headers .= 'From: noreply@bakhidibricks.co.za';
+  $headers .= 'From: maintenance@bakhidibricks.co.za';
 
   try {
     mail($to,$subject,$message,$headers);
